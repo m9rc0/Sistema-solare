@@ -1,3 +1,8 @@
+# emacs temporary files
+*~
+*#
+
+
 # Prerequisites
 *.d
 
@@ -34,3 +39,6 @@
 
 prova.cpp
 prova
+
+# text files
+*.txt

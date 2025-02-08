@@ -72,10 +72,9 @@ myVector body::getVelocity()
 
 /******************************/
 
-body& body::move(const myVector &F, double dt)
+body& body::move(integrator *I)
 {
-  _v += (F/_mass)*dt;
-  _x += _v*dt;
+  I->nextStep(this);
   return *this;
 }
 
@@ -88,3 +87,13 @@ std::ostream& operator<<(std::ostream &o, const body &corpo)
 }
 
 /******************************/
+
+body& body::operator=(const body &b)
+{
+  _x = b._x;
+  _v = b._v;
+  _name = b._name;
+  _mass = b._mass;
+
+  return *this;
+}

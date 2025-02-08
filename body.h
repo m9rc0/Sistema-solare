@@ -3,8 +3,11 @@
 
 #include "subSystem.h"
 #include "myVector.h"
+#include "integrator.h"
 #include <string>
 #include <iostream>
+
+class integrator;
 
 class body : public subSystem
 {
@@ -28,10 +31,11 @@ public:
   double getMass();
   myVector getPosition();
   myVector getVelocity();
-  body& move(const myVector &F, double dt);
+  body& move(integrator *I);
 
   // operators
   friend std::ostream& operator<<(std::ostream &o, const body &corpo);
+  body& operator=(const body &b);
 };
 
 #endif

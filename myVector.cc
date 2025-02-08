@@ -194,3 +194,18 @@ double myVector::norm()
     }
   return sqrt(norm);
 }
+
+double dot(const myVector v1, const myVector v2)
+{
+  if (v1.dim != v2.dim)
+    {
+      std::cout << "Vectors need to have the same dimension!\n";
+      exit(-1);
+    }
+  double prod = 0.;
+  for (int i = 0; i < v1.dim; i++)
+    {
+      prod += v1[i]*v2[i];
+    }
+  return prod;
+}

@@ -4,6 +4,7 @@
 #include "solarSystem.h"
 #include "myVector.h"
 #include "evolve.h"
+#include "integrator.h"
 
 
 using namespace std;
@@ -41,6 +42,8 @@ int main()
   // prepare for the evolution
   double totalTime = 44192000, dt = 60, G = 6.67e-11;
   evolve myEvolution;
+  RK2 I;
+  myEvolution.setAlgorithm(&I);
   myEvolution.setSystem(&earthMoon);
   myEvolution.setDt(dt);
   myEvolution.setG(G);

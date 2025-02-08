@@ -37,6 +37,7 @@ public:
   double& operator[](int i) {return x[i];};
 
   friend  std::ostream& operator<<(std::ostream &o, const myVector &vec);
+  friend double dot(const myVector v1, const myVector v2);
   
   // methods
   int getDimension() const;
@@ -44,5 +45,4 @@ public:
   double norm();
 };
 
-
-#endif
+#endif 

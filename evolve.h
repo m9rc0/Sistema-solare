@@ -4,20 +4,20 @@
 #include "solarSystem.h"
 #include "myVector.h"
 #include "body.h"
+#include "integrator.h"
 #include <list>
 
 class evolve
 {
 private:
   std::list<body *> _bodies;
-  double _dt;
-  double _G;
+  integrator *_I;
 public:
+  evolve& setAlgorithm(integrator *I);
   evolve& setSystem(solarSystem *s);
   evolve& setDt(double dt);
   evolve& setG(double G);
-  myVector calculateForce(body *corpo);
-  void evolution();
+  evolve& evolution();
   
 };
 
