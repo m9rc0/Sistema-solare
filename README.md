@@ -6,7 +6,6 @@ Per ora utilizzo pattern composite per la struttura del sistema solare, più una
 
 Pattern strategy implementata ma per semplicità ancora si utilizza una dinamica "seriale", non sono ancora riuscito a farla diventare "sincrona"
 
-Per le condizioni iniziali dei pianeti si prova a tenere conto della inclinazione dell'orbita, ma con un modello molto semplice, in cui tutte le ellissi sono inizialmente orientate nello stesso verso e in modo che le rotazioni siano semplici da fare. 
 
 I dati sono presi dal sito della [NASA](https://nssdc.gsfc.nasa.gov/planetary/factsheet/)
 
