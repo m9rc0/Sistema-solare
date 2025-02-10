@@ -11,3 +11,6 @@ Per le condizioni iniziali dei pianeti si prova a tenere conto della inclinazion
 I dati sono presi dal sito della [NASA](https://nssdc.gsfc.nasa.gov/planetary/factsheet/)
 
 Dati più precisi sono sul [sito](https://ssd.jpl.nasa.gov/horizons/)
+
+Il risultato è:
+![immagine](https://github.com/m9rc0/Sistema-solare/blob/main/SistemaSolare.png)
