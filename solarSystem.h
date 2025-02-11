@@ -13,6 +13,7 @@ public:
   solarSystem& setPosition(const myVector &x);
   solarSystem& setVelocity(const myVector &v);
   std::list<body *> getComponents();
+  myVector getAngularMomentum();
 };
 
 #endif

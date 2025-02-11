@@ -97,3 +97,11 @@ body& body::operator=(const body &b)
 
   return *this;
 }
+
+
+myVector body::getAngularMomentum()
+{
+  myVector L(3);
+  L = cross(_x, _v*_mass);
+  return L;
+}

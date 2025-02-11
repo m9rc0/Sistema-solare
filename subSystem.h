@@ -13,6 +13,7 @@ public:
   virtual subSystem& setPosition(const myVector &x) = 0;
   virtual subSystem& setVelocity(const myVector &v) = 0;
   virtual std::list<body *> getComponents() = 0;
+  virtual myVector getAngularMomentum() = 0;
 };
 
 #endif

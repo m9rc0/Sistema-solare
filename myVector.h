@@ -19,7 +19,7 @@ public:
   
   // operator overload
   myVector &operator=(const myVector &vec);
-  myVector &operator=(std::vector<double> vec) ;
+  myVector &operator=(std::vector<double> vec);
   myVector &operator=(double vec);  
   
   // sum and subtraction between vectors
@@ -38,11 +38,12 @@ public:
 
   friend  std::ostream& operator<<(std::ostream &o, const myVector &vec);
   friend double dot(const myVector v1, const myVector v2);
-  
+  friend myVector cross(const myVector v1, const myVector v2);
   // methods
   int getDimension() const;
   double getComponent(int i) const;
   double norm();
 };
+
 
 #endif 

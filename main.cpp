@@ -119,28 +119,30 @@ int main()
   RK2 I;
   myEvolution.setAlgorithm(&I).setSystem(&s).setDt(dt).setG(G);
   long int steps = (long int) (totalTime/dt + 0.5);
-  cout << "TotalSteps = " << steps << endl;
+  cout << "# TotalSteps = " << steps << endl;
   list<body*> planets = s.getComponents();
-  ofstream results("./simulazione.txt");
+  //  ofstream results("./simulazione.txt");
   
-  
+  myVector L0(3);
+  L0 = s.getAngularMomentum();
+
   for (long int i = 0; i < steps; i++)
     {
       myEvolution.evolution();
-      if ((i % 100) == 0)
+      // if ((i % 100) == 0)
+      // 	{
+      // 	  list<body*>::iterator i2 = planets.begin();
+      // 	  list<body*>::iterator e2 = planets.end();
+      // 	  while (i2 != e2)
+      // 	    {
+      // 	      results << (*i2)->getName() << " ";
+      // 	      results << (*i2)->getPosition()-sun.getPosition() << endl; 
+      // 	      i2++;
+      // 	    }
+      // 	}
+      if((i%500==0))
 	{
-	  list<body*>::iterator i2 = planets.begin();
-	  list<body*>::iterator e2 = planets.end();
-	  while (i2 != e2)
-	    {
-	      results << (*i2)->getName() << " ";
-	      results << (*i2)->getPosition()-sun.getPosition() << endl; 
-	      i2++;
-	    }
-	}
-      if((i%1000==0))
-	{
-	  cout << i << " steps" << endl;
+	  cout << (L0 - s.getAngularMomentum()).norm()/L0.norm() << endl;
 	}
     }
   

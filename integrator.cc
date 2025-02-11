@@ -21,7 +21,7 @@ integrator& integrator::setG(double G)
 
 myVector integrator::calculateAcceleration(body *corpo)
 {
-    myVector F(3);
+  myVector F(3);
   F = 0.;
   std::list<body *>::iterator i = _bodies.begin();
   std::list<body *>::iterator e = _bodies.end();
@@ -52,7 +52,7 @@ RK2& RK2::nextStep(body *corpo)
   body temp;
   temp = *corpo;
   
-  myVector dx, dv;
+  myVector dx(3), dv(3);
   dx = corpo->getVelocity()*_dt;
   dv = calculateAcceleration(corpo)*_dt;
 

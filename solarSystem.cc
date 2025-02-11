@@ -64,4 +64,20 @@ std::list<body *> solarSystem::getComponents()
 }
 
 /********************/
+
+myVector solarSystem::getAngularMomentum()
+{
+  myVector L(3);
+  L = 0.;
+  // calculates recursively the total angular momentum of the system
+  std::list<subSystem *>::iterator i = _components.begin();
+  std::list<subSystem *>::iterator e = _components.end();
+  while (i != e)
+    {
+      L += (*i)->getAngularMomentum();
+      i++;
+    }
+  return L;
+}
+
 /********************/

@@ -32,7 +32,8 @@ public:
   myVector getPosition();
   myVector getVelocity();
   body& move(integrator *I);
-
+  myVector getAngularMomentum();
+  
   // operators
   friend std::ostream& operator<<(std::ostream &o, const body &corpo);
   body& operator=(const body &b);

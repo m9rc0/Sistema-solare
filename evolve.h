@@ -2,7 +2,6 @@
 #define _EVOLVE_H
 
 #include "solarSystem.h"
-#include "myVector.h"
 #include "body.h"
 #include "integrator.h"
 #include <list>
