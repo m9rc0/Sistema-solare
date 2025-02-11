@@ -13,3 +13,10 @@ Dati più precisi sono sul [sito](https://ssd.jpl.nasa.gov/horizons/)
 
 Il risultato è:
 ![immagine](https://github.com/m9rc0/Sistema-solare/blob/main/SistemaSolare.png)
+
+
+Prossimi step sono:
+- Aggiungere le lune su giove e analizzare il loro comportamento
+- Provare a derivare da body una classe space-ship e cercare di raggiungere altri pianeti
+- Aggiungere algoritmi di integrazione (possibilmente RK4 e verlet, magari anche qualcosa con adaptive stepsize)
+- Aggiungere metodi per controllare se la simulazione è corretta (conservazione energia o momento angolare totale del sistema)
