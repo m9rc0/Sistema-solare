@@ -63,3 +63,13 @@ RK2& RK2::nextStep(body *corpo)
   
   return *this;
 }
+
+verlet& verlet::nextStep(body *corpo)
+{
+  // devo conservare in memoria l'accelerazione al tempo n
+  myVector phiN(3);
+  phiN = calculateAcceleration(corpo);
+  corpo->setPosition((corpo->getVelocity())*_dt + phiN*_dt*_dt*0.5);
+  corpo->setVelocity((calculateAcceleration(corpo) + phiN)*0.5*_dt);
+  return *this; 
+}

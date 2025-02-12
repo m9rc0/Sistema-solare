@@ -33,4 +33,9 @@ public:
   RK2& nextStep(body *corpo);
 };
 
+class verlet : public integrator
+{
+  verlet& nextStep(body *corpo);
+};
+
 #endif

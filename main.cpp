@@ -116,7 +116,7 @@ int main()
   // prepare for the evolution
   long double totalTime = 1e10, dt = 30000, G = 6.67e-20;
   evolve myEvolution;
-  RK2 I;
+  verlet I;
   myEvolution.setAlgorithm(&I).setSystem(&s).setDt(dt).setG(G);
   long int steps = (long int) (totalTime/dt + 0.5);
   cout << "# TotalSteps = " << steps << endl;
